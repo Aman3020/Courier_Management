@@ -4,3 +4,5 @@ Courier_Management.exe
 # Ignore VSCode settings
 .vscode/
 
+*.txt
+
