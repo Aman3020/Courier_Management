@@ -1,18 +1,22 @@
-# 📦 Courier Management System
 
-A simple **Courier Management System** built using **C++** and **Object-Oriented Programming (OOP)** concepts. This system simulates basic courier management tasks like adding couriers, viewing orders, tracking status, and managing deliveries via a command-line interface.
+# 📦 Courier Management System (Enhanced C++ Project)
+
+A secure and efficient **Courier Management System** built in **C++** using **Object-Oriented Programming (OOP)** principles and robust **file handling**. This project simulates courier management operations via a command-line interface.
 
 ---
 
 ## ✅ Features
 
-- Add new courier orders
-- Display courier details
-- Update delivery status
-- Track couriers by ID
-- View all pending/delivered couriers
-- Output automatically saved to a text file (`courier_records.txt`)
-- Simple console-based interface
+- Admin login with username/password authentication
+- Add new courier orders with status tracking
+- Display all courier records in tabular format
+- Search courier by tracking ID
+- Delete courier record
+- Update courier details (including status)
+- Filter couriers by delivery status (Pending / In Transit / Delivered)
+- Input validation to prevent empty fields or duplicates
+- Stores all data persistently in a text file (`courier.txt`)
+- Uses structured CSV-like file storage
 
 ---
 
@@ -25,14 +29,14 @@ A simple **Courier Management System** built using **C++** and **Object-Oriented
 
 ## ⚙️ How to Compile & Run
 
-1. Open terminal / command prompt in your project folder.
+1. Open terminal in the project folder.
 
-2. Compile the code:
+2. Compile:
 ```bash
 g++ -o Courier_Management Courier_Management.cpp
 ````
 
-3. Run the program:
+3. Run:
 
 ```bash
 ./Courier_Management
@@ -42,55 +46,66 @@ g++ -o Courier_Management Courier_Management.cpp
 
 ## 📚 OOP Concepts Used
 
-* **Classes and Objects**: For courier management.
-* **Encapsulation**: Data members are private with public access methods.
-* **Inheritance**: (If used, to extend classes.)
-* **Polymorphism**: (Optional, via method overloading/overriding.)
-* **File Handling**: Output and updates are saved to a text file.
+* **Classes and Objects**: Courier, CourierManager, CourierFileHandler
+* **Encapsulation**: Private members and public methods
+* **File Handling**: Reading and writing CSV data
+* **Exception Handling**: Runtime error management using try-catch blocks
+* **Static Method**: Used for CSV parsing (`fromCSV`)
+* **Single Responsibility Principle**: File handling logic separated via `CourierFileHandler`
 
 ---
 
 ## 🚀 How It Works
 
-* Program displays a main menu after launch.
-* Options include adding, viewing, updating, and tracking orders.
-* Courier data is handled using objects internally.
-* Order details and updates are saved in a text file (e.g. `courier_records.txt`).
-* Menu loops until user chooses to exit.
+1. Admin authentication is required to access system.
+2. Menu-driven interface for managing couriers.
+3. Orders can be:
+
+   * Added
+   * Viewed
+   * Updated
+   * Deleted
+   * Filtered by delivery status
+4. Output is displayed neatly and stored persistently in `courier.txt`.
 
 ---
 
 ## 📥 How to Use
 
-1. Compile and run as shown above.
-2. Use the menu to:
+* After login, select options from the menu:
 
-   * Add orders
-   * View or track them
-   * Update delivery status
-3. Output is saved to `courier_records.txt` automatically.
+  * Insert couriers
+  * Search / update / delete by tracking ID
+  * Filter by status
+* Records are auto-saved to a text file.
+
+---
+
+## 📁 Project Structure
+
+```
+Courier_Management.cpp
+courier.txt (auto-generated)
+README.md
+```
 
 ---
 
 ## 📃 License
 
-This project is free for educational and non-commercial use.
+Free to use for educational and non-commercial purposes.
 
 ---
 
 ## 🙌 Contributing
 
 * Fork this repository
-* Suggest features or improvements via issues
-* Submit pull requests for contributions
+* Raise issues or suggest improvements
+* Submit pull requests for collaboration
 
 ---
 
 ```
 
----
-
-### ✅ Now your README is clear, professional, and ready to push.
-
-Let me know if you'd like to add example outputs or screenshots!
+Let me know if you'd like me to add a sample CSV output or example screenshots.
 ```
