@@ -1,1 +1,6 @@
-.vscode
+# Ignore build files
+Courier_Management.exe
+
+# Ignore VSCode settings
+.vscode/
+
